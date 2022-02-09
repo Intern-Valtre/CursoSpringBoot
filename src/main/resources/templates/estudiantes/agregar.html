@@ -10,7 +10,7 @@
     <h1>Agregar estudiantes</h1>
     <div class="container">
         <a class="btn btn-warning" th:href="@{/estudiantes}">Cancelar</a>
-        <form method="post" th:action="@{/estudiantes/new}" th:object="${Estudiantes}">
+        <form method="post" th:action="@{/estudiantes/new}" th:object="${estudianteNuevo}">
             <div class="form-group">
                 <label for="nombres">Nombres</label>
                 <input type="text" class="form-control"

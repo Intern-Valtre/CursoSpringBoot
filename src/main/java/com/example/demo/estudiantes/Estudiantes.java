@@ -26,7 +26,7 @@ public class Estudiantes {
     private String nombres;
     private String apellidos;
     private Integer clases;
-    private Boolean estatus;
+    private Boolean estatus = true;
 
     public Estudiantes(String nombres, String apellidos, Integer clases) {
         this.nombres = nombres;

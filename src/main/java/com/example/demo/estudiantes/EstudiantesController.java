@@ -25,7 +25,8 @@ public class EstudiantesController {
     }
 
     @GetMapping(path = "new")
-    public String agregarEstudiante() {
+    public String agregarEstudiante(Model model) {
+        model.addAttribute("estudianteNuevo", new Estudiantes());
         return "estudiantes/agregar";
     }
 
