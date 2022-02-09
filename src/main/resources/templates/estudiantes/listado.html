@@ -30,7 +30,7 @@
                 <td th:text="${estudianteDato.estatus}"></td>
                 <td>
                     <a class="btn btn-warning" th:href="@{/estudiantes/}+${estudianteDato.id}" >Editar</a>
-                    <a class="btn btn-danger" >Eliminar</a>
+                    <a class="btn btn-danger" th:href="@{/estudiantes/desactivar/}+${estudianteDato.id}" >Desactivar</a>
                 </td>
             </tr>
             </tbody>

@@ -46,4 +46,21 @@ public class EstudiantesService {
         return flag;
 
     }
+
+    public void desactivadoEstudiante(Long idEstudiante) {
+        Optional<Estudiantes> estudianteBusqueda = estudiantesRepository.findById(idEstudiante);
+
+        if (estudianteBusqueda.isPresent()) {
+            if (estudianteBusqueda.get().getEstatus()) {
+                estudiantesRepository.desactivarEstudiante(idEstudiante);
+            }
+        }
+
+    }
+
+    //TODO: Necesitamos hacer un metodo para reactivar a los estudiantes
+    public void activadoEstudiante(Long idEstudiante) {
+
+    }
+
 }
