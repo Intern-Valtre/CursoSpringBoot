@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de estudiantes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>Agregar estudiantes</h1>
+    <div class="container">
+        <a class="btn btn-warning" th:href="@{/estudiantes}">Cancelar</a>
+        <form method="post" th:action="@{/estudiantes/new}" th:object="${Estudiantes}">
+            <div class="form-group">
+                <label for="nombres">Nombres</label>
+                <input type="text" class="form-control"
+                       id="nombres" th:field="*{nombres}"
+                       placeholder="Ingresa Nombres del estudiante">
+                <small id="nombreHelp" class="form-text text-muted">Ingresa los nombres del estudiante</small>
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control"
+                       id="apellidos" th:field="*{apellidos}"
+                       placeholder="Ingresa Apellidos del estudiante">
+                <small id="apellidosHelp" class="form-text text-muted">Ingresa los apellidos del estudiante</small>
+                <label for="clases">Clases</label>
+                <input type="text" class="form-control"
+                       id="clases" th:field="*{clases}"
+                       placeholder="Ingresa el numero de clases del estudiante">
+                <small id="clasesHelp" class="form-text text-muted">Ingresa el numero de clases del estudiante</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar estudiante</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
