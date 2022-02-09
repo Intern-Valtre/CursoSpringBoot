@@ -19,5 +19,12 @@ public interface EstudiantesRepository extends JpaRepository<Estudiantes, Long> 
     )
     int desactivarEstudiante(Long idEstudiante);
 
+    @Transactional
+    @Modifying
+    @Query("UPDATE Estudiantes e " +
+            "SET e.estatus = TRUE "+
+            "WHERE e.id = ?1"
+    )
+    int activarEstudiante(Long idEstudiante);
 
 }

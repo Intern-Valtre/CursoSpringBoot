@@ -73,4 +73,13 @@ public class EstudiantesController {
         return "redirect:/estudiantes";
     }
 
+    @GetMapping(path = "/activar/{idEstudiante}")
+    public String activarEstudiante(
+            @PathVariable("idEstudiante") Long idEstudiante,
+            Model model
+    ) {
+        estudiantesService.activadoEstudiante(idEstudiante);
+        return "redirect:/estudiantes";
+    }
+
 }
