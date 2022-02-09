@@ -1,5 +1,6 @@
 package com.example.demo.estudiantes;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,5 +46,11 @@ public class EstudiantesService {
 
         return flag;
 
+    }
+
+    //Permite borrado de estudiantes mediante id
+    public Boolean eliminarEstudiante(Long id) {
+        estudiantesRepository.deleteById(id);
+        return true;
     }
 }

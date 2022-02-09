@@ -34,6 +34,10 @@ public class EstudiantesFactory {
             //Registra el estudiante
             estudiantesService.agregarEstudiante(estudianteGiselle);
 
+            //Elimina el estudiante con valor 1
+            Long idEliminar = Long.valueOf(1);
+            estudiantesService.eliminarEstudiante(idEliminar);
+
         };
     }
 
