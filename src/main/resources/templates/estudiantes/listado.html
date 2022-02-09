@@ -18,6 +18,7 @@
                 <th scope="col">Apellidos</th>
                 <th scope="col">Clases</th>
                 <th scope="col">Estatus</th>
+                <th scope="col">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -27,6 +28,10 @@
                 <td th:text="${estudianteDato.apellidos}"></td>
                 <td th:text="${estudianteDato.clases}"></td>
                 <td th:text="${estudianteDato.estatus}"></td>
+                <td>
+                    <a class="btn btn-warning" >Editar</a>
+                    <a class="btn btn-danger" >Eliminar</a>
+                </td>
             </tr>
             </tbody>
         </table>
